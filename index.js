@@ -7,7 +7,7 @@ const app = express();
 //Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('api/members', require('./routes/api/members'));
+app.use('/api/members', require('./routes/api/members'));
 
 //listening for port on evironment variable or on 5000
 const PORT = process.env.PORT || 5000;
